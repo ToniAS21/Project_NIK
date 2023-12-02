@@ -49,7 +49,7 @@ col3.plotly_chart(plot_prof_1, use_container_width=True)  # use_container_width 
 ## ----- BAR PLOT 1B -----
 rata_rata_SS_Prof = customer_pkl.groupby('Profession')['Spending_Score'].mean()
 rata_rata_SS_Prof = pd.DataFrame(rata_rata_SS_Prof).reset_index()
-rata_rata_SS_Prof = round(rata_rata_SS_Prof, 0).head()
+rata_rata_SS_Prof = round(rata_rata_SS_Prof, 0)
 
 # px.bar
 plot_prof_2 = px.bar(data_frame=rata_rata_SS_Prof.sort_values(by='Spending_Score').head(input_select1), 
